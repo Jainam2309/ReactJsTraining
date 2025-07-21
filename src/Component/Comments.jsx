@@ -1,42 +1,63 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export default function Comments() {
-    let [formData,setFormData] = useState({
-        username:"",
-        remarks:"",
-        rating: 5
-    })
+  const [formData, setFormData] = useState({
+    username: "",
+    remarks: "",
+    rating: 5,
+  });
 
-    let handleInputChange = (event) => {
-        setFormData((currData) => {
-            return{...currData,[event.target.name] : event.target.value};
-        });
-    };
+  const handleInputChange = (event) => {
+    setFormData((currData) => ({
+      ...currData,
+      [event.target.name]: event.target.value,
+    }));
+  };
 
-    let handleSubmit = (event) => {
-        console.log(formData);
-        event.preventDefault();
-        setFormData({
-        username:"",
-        remarks:"",
-        rating: 5
-        })
-    }
-    return(
-        <div>
-            <h4>give me comment</h4>
-            <form onSubmit={handleSubmit}>
-                <input placeholder="username" type="text" value={formData.username} onChange={handleInputChange}/>
-                <br></br>   <br></br>
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData);
+    setFormData({
+      username: "",
+      remarks: "",
+      rating: 5,
+    });
+  };
 
-                <textarea value={formData.remarks} placeholder="add few remarks" onChange={handleInputChange}>Remarks</textarea>
-                <br></br>   <br></br>
+  return (
+    <div>
+      <h4>Give me a comment</h4>
+      <form onSubmit={handleSubmit}>
+        <input
+          name="username"
+          placeholder="Username"
+          type="text"
+          value={formData.username}
+          onChange={handleInputChange}
+        />
+        <br /> <br />
 
-                <input placeholder="rating" type="number" min={1} max={5} value={formData.rating} onChange={handleInputChange}/>
-                <br></br>   <br></br>
+        <textarea
+          name="remarks"
+          value={formData.remarks}
+          placeholder="Add few remarks"
+          onChange={handleInputChange}
+        />
+        <br /> <br />
 
-                <button>Add Comment</button>
-            </form>
-        </div>
-    )
+        <input
+          name="rating"
+          placeholder="Rating"
+          type="number"
+          min={1}
+          max={5}
+          value={formData.rating}
+          onChange={handleInputChange}
+        />
+        <br /> <br />
+
+        <button type="submit">Add Comment</button>
+      </form>
+    </div>
+  );
 }

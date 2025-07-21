@@ -1,5 +1,5 @@
 import { useState } from "react"
-import data from "./data.js"
+import data from "./data1.js"
 import Tours from "./Tours";
 
 export default function City() {

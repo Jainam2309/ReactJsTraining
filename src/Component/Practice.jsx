@@ -306,7 +306,7 @@ export default function Practice() {
 
   return (
     <div style={styles}>
-      <h1>Button Clicked: {count} times</h1>
+      <h1>Button Action: {count} times</h1>
       <button onClick={handleClick} style={{ padding: "10px 20px" }}>
         Click Me
       </button>

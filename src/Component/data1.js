@@ -45,6 +45,6 @@
     info: "Cape Town boasts majestic landscapes like Table Mountain and Cape Point, along with a rich blend of cultures and history. From wildlife adventures to vineyard tours and ocean views, the city is a gateway to natural beauty and authentic African experiences.",
     price: 2100
   }
-]
+];
 
 export default data;

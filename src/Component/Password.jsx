@@ -23,7 +23,7 @@ const placeholder = "Enter your password";
         <div>
             <h1>Show/Hide Password</h1>
             <input type={showPassword ? "text" : "password"} value={password} onChange={(e) => setPassword(e.target.value)} placeholder={placeholder}/>
-            <button onClick={toogleVisibility} ></button>
+            <button onClick={toogleVisibility} style={{color:"white"}}  >Show</button>
         </div>
     )
 }
