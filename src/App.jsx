@@ -214,6 +214,7 @@ import RandomGIF from './Component/RandomGIF';
 import ComponentDropdown from './Component/ComponentDropdown'; 
 import Router from './Component/Router/Router';
 import TodoList2 from './Component/TodoList2';
+import Pagination from './Component/Pagination/Pagination';
 
 
 function App() {
@@ -237,6 +238,7 @@ function App() {
     { value: "randomgif" },
     { value : "route"},
     { value : "todolist2"},
+    { value : "pagination"},
   
   
   ];
@@ -259,7 +261,8 @@ function App() {
     "/randomnumber" : "Random mber Genarator",
     "/randomgif" : "Random gif",
     "/route" : "Router",
-    "/todolist2" : "Todo List2"
+    "/todolist2" : "Todo List2",
+    "/pagination" : "Pagination"
     
      }
 
@@ -302,6 +305,7 @@ function App() {
           <Route path="/randomgif" element={<RandomGIF />} />
            <Route path="/route" element={<Router />} />
            <Route path="todolist2" element={<TodoList2/>} />
+            <Route path="/pagination" element={<Pagination />}/>
           <Route path="*" element={<h2>Select a Component from the Menu</h2>} />
         </Routes>
       </div>

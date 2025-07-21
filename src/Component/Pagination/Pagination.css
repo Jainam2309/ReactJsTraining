@@ -1,0 +1,35 @@
+.product-card {
+  width: 150px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.product-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pagination-buttons {
+  margin: 20px 0;
+}
+.page-number {
+  margin: 0 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid gray;
+}
+.page-number.active {
+  background-color: aqua;
+  color: white;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
